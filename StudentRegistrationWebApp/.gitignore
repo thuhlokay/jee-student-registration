@@ -1,0 +1,21 @@
+# NetBeans
+nbproject/private/
+build/
+dist/
+nbbuild/
+*.bak
+
+# Compiled classes
+*.class
+
+# Logs
+*.log
+
+#Packaging
+*.war
+*.ear
+
+# IDEs
+.idea/
+*.iml
+.vscode/
