@@ -126,7 +126,7 @@ Also make sure the MySQL JDBC driver is added to your project libraries.
 
 ## 👨‍💻 Authors
 
-Khaholelo Thuhlo-Cakeni
+Khaholelo Thuhlo-Cakeni &
 Bokamoso Glen Nchabeleng
 
 ## 📄 License
