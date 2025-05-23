@@ -6,9 +6,12 @@
 package za.ac.tut.entities;
 
 import java.io.Serializable;
+import javax.persistence.Basic;
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.Id;
+import javax.persistence.Lob;
 
 /**
  *
@@ -18,26 +21,40 @@ import javax.persistence.Id;
 public class Student implements Serializable {
 
     private static final long serialVersionUID = 1L;
+    
     @Id
     private Long id;
-    
     private String name;
     private String surname;
     
     @Column(name="EMAIL")
     private String email;
     private String course;
+    
+    @Lob
+    @Basic(optional = true)
+    private byte[] photo;
 
     public Student() {
     }
 
-    public Student(Long id, String name, String surname, String emailAddress, String course) {
+    public Student(Long id, String name, String surname, String emailAddress, String course, byte[] photo) {
         this.id = id;
         this.name = name;
         this.surname = surname;
         this.email = emailAddress;
         this.course = course;
     }
+
+    public byte[] getPhoto() {
+        return photo;
+    }
+
+    public void setPhoto(byte[] photo) {
+        this.photo = photo;
+    }
+    
+    
 
     public String getName() {
         return name;

@@ -8,6 +8,10 @@
         <servlet-name>ViewAllStudentsServlet</servlet-name>
         <servlet-class>za.ac.tut.web.ViewAllStudentsServlet</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>StartServlet</servlet-name>
+        <servlet-class>za.ac.tut.web.StartServlet</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>AddStudentServlet</servlet-name>
         <url-pattern>/AddStudentServlet.do</url-pattern>
@@ -15,6 +19,10 @@
     <servlet-mapping>
         <servlet-name>ViewAllStudentsServlet</servlet-name>
         <url-pattern>/ViewAllStudentsServlet.do</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>StartServlet</servlet-name>
+        <url-pattern>/StartServlet.do</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

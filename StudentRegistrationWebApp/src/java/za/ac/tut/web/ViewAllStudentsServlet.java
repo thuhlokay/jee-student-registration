@@ -28,12 +28,28 @@ public class ViewAllStudentsServlet extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         
+        try{
+            viewAllStudents(request, response);
+        }
+        catch(Exception e){
+            e.printStackTrace();
+            request.setAttribute("errMsg", e.getMessage());
+            RequestDispatcher disp = request.getRequestDispatcher("error.jsp");
+            disp.forward(request, response);
+        }
+        
+        
+    }
+
+    private void viewAllStudents(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        
         List<Student> list = sfl.findAll();
         
         request.setAttribute("list", list);
         
         RequestDispatcher disp = request.getRequestDispatcher("view_all_students_outcome.jsp");
         disp.forward(request, response);
+        
     }
 
 }
